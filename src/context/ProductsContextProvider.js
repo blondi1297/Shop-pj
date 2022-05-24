@@ -11,7 +11,6 @@ const ProductsContextProvider = ({ children }) => {
     const fetchAPI = async () => {
       setProducts(await getProducts());
     };
-
     fetchAPI();
   }, []);
 
