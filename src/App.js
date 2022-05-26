@@ -6,7 +6,6 @@ import ProductDetails from './components/ProductDetails';
 import Store from './components/Store';
 import Navbar from './components/shared/Navbar';
 import ShopCart from './components/ShopCart';
-
 //context
 import ProductsContextProvider from './context/ProductsContextProvider';
 import CartContextProvider, { CartContext } from './context/CartContextProvider';
