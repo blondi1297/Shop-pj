@@ -1,0 +1,60 @@
+.maincontainer {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 24px rgba(149, 157, 165, 0.4);
+    z-index: 10;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 15px 180px;
+  }
+  .icon img {
+      width: 50px;
+      padding-top: 5px;
+  }
+  .productlink {
+    text-decoration: none;
+    color: #243b67;
+    font-weight: 600;
+    border-bottom: 2px solid #243b67;
+    border-radius: 2px;
+    padding: 0 1px;
+    transition: all 0.2s ease;
+  }
+  .productlink:hover {
+      color: #5e287d;
+  }
+  .icon {
+      position: relative;
+  }
+
+  .iconZero {
+      position: absolute;
+      top: 5px;
+      right: -3px;  
+      padding: 4px;
+      color: #fff;
+      font-weight: bold;
+      background-color: #75329b92;
+      border-radius: 50%;
+      height: 12px;
+      line-height: 11px;
+  }
+  .iconMorethanZero {
+    position: absolute;
+    top: 5px;
+    right: -3px;  
+    padding: 4px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #75329b;
+    border-radius: 50%;
+    height: 12px;
+    line-height: 11px;
+  }

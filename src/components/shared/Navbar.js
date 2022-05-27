@@ -4,16 +4,18 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContextProvider';
 //icon
 import shopIcon from "../../icon/shopbasket.png";
+//style
+import styles from "./Navbar.module.css"
 
 const Navbar = () => {
     const {state} = useContext(CartContext);
     return (
-        <div>
-            <div>
-                <Link to="/products">Products</Link>
-                 <div>
+        <div className={styles.maincontainer}>
+            <div className={styles.container}>
+                <Link className={styles.productlink} to="/products">Products</Link>
+                 <div className={styles.icon}>
                     <Link to="/cart"><img src={shopIcon} alt="shopicon"/></Link>
-                    <span>{state.itemsCounter}</span>
+                    <span className={ state.itemsCounter ? styles.iconMorethanZero : styles.iconZero }>{state.itemsCounter}</span>
                  </div>
             </div>
         </div>
