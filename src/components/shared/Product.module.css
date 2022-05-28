@@ -73,6 +73,15 @@
   transition: all 0.2s ease;
 
 }
+.counter {
+    display: inline-block;
+    width: 20px;
+    margin-right: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #75329b;
+    cursor: context-menu;
+  }
 
 .smallButton {
     width: 30px !important;
@@ -84,6 +93,6 @@
     height: 20px;
     position: absolute;
     top: 325px;  
-    right: 71px;
+    right: 94px;
   }
   
