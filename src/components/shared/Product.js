@@ -1,16 +1,23 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux"
+
 //function
 import { shorten, isInCart, quantityCount } from "../../helper/function";
-//context
-import { CartContext } from "../../context/CartContextProvider";
+
 //icon
 import trashIcon from "../../icon/trash.svg";
+
+//actions
+import { addItem, removeItem, increase, decrease} from "../../redux/cart/cartAction"
+
 //style
 import styles from "./Product.module.css";
 
 const Product = ({ productData }) => {
-  const { state, dispatch } = useContext(CartContext);
+
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.cartState);
 
   return (
     <div className={styles.container}>
@@ -26,7 +33,7 @@ const Product = ({ productData }) => {
             <button
               className={styles.smallButton}
               onClick={() =>
-                dispatch({ type: "DECREASE", payload: productData })
+                dispatch(decrease(productData))
               }
             >
               -
@@ -36,7 +43,7 @@ const Product = ({ productData }) => {
             <button
               className={styles.smallButton}
               onClick={() =>
-                dispatch({ type: "REMOVE_ITEM", payload: productData })
+                dispatch(removeItem(productData))
               }
             >
               <img className={styles.trash} src={trashIcon} alt="trash icon" />
@@ -51,7 +58,7 @@ const Product = ({ productData }) => {
             <button
               className={styles.smallButton}
               onClick={() =>
-                dispatch({ type: "INCREASE", payload: productData })
+                dispatch(increase(productData))
               }
             >
               +
@@ -60,7 +67,7 @@ const Product = ({ productData }) => {
             <button
               className={styles.add}
               onClick={() =>
-                dispatch({ type: "ADD_ITEM", payload: productData })
+                dispatch(addItem(productData))
               }
             >
               Add to Cart
