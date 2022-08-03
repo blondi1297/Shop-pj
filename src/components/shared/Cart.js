@@ -13,6 +13,7 @@ import styles from "./Cart.module.css"
 
 const Cart = (props) => {
 
+    
   const dispatch = useDispatch()
   const { image, title, quantity, price } = props.data;
 

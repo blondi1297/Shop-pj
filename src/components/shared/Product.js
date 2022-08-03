@@ -21,7 +21,9 @@ const Product = ({ productData }) => {
 
   return (
     <div className={styles.container}>
-      <img src={productData.image} alt="product" />
+
+        <img src={productData.image} alt="product" /> 
+        
       <h3>{shorten(productData.title)}</h3>
       <p>{productData.price} $</p>
       <div>

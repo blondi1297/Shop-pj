@@ -17,9 +17,11 @@
   margin-bottom: 20px;
   border-radius: 6px;
 }
+
 .productImage {
   width: 80px;
 }
+
 .data {
   text-align: left;
 }
@@ -68,3 +70,4 @@
   background-color: #75329b;
   transition: all 0.2s ease;
 }
+
