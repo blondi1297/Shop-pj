@@ -98,3 +98,34 @@
     right: 94px;
   }
   
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    .container {
+      width: calc(100% - 30px);
+      margin: 0px 0px 20px 10px;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 570px) {
+    body {
+      margin-top: 30px;
+    }
+    .container {
+      width: calc(100% - 50px);
+      margin: 110px 40px -80px;
+    
+    }
+  }
+
+  @media (min-width: 570px) and (max-width: 690px) {
+    
+    .container {
+      width: fit-content;
+      margin-top: 80px;
+    }
+  }
+  @media (min-width: 690px) and (max-width: 768px) {
+    .container {
+      margin-top: 90px;
+    }
+  }
